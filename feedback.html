@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Feedback</title>
+</head>
+
+<body>
+  <section id="feedback">
+    <h1 class="biggerTitle">Feedback Form</h1>
+    <form>
+      <table class="setMiddle feedbackTable">
+        <tr>
+          <td><label for="name">Your name</label><br>
+            <input type="text" name="name" id="name" maxlength="6">
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="email">Your email address</label><br>
+            <input type="email" id="email" name="email">
+          </td>
+        </tr>
+        <tr>
+          <td>What is your gender?<br>
+            <input type="radio" id="female" name="sex" value="female" checked="checked"><label
+              for="female">Female</label>
+            <input type="radio" id="male" name="sex" value="male"><label for="male">Male</label>
+            <input type="radio" id="others" name="sex" value="others"><label for="others">Other</label>
+            <input type="radio" id="none" name="sex" value="none"><label for="others">I prefer not to say</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Please fill in your feedback<br>
+            <textarea name="feedback" id="feedback" cols="53" rows="15"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td class="buttonsLine">
+            <input type="reset" value="Clear"><input type="submit" value="Submit">
+          </td>
+        </tr>
+  </section>
+</body>
+
+</html>
