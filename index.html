@@ -4,17 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="asset/icon/logo.ico" type="image/x-icon" />
   <link rel="stylesheet" href="style.css">
   <title>GreenShell</title>
 </head>
 
 <body>
-  <a href="assignment.html">
+  <a href="assignment.html" target="_blank">
     <div class="assignment">My<br>Assignment</div>
   </a>
   <nav>
     <ul class="nav_div">
-      <li class="nav_logo"><a href="/index.html">GreenShell</a></li>
+      <li class="nav_logo"><a href="index.html">GreenShell</a></li>
       <li class="nav_categories"><a href="#categories"><img src="asset\icon\categories.png" alt="">categories</a>
       </li>
       <li class="nav_search">
@@ -25,7 +26,8 @@
           </div>
         </form>
       </li>
-      <li class="nav_sign_in"><a href="#sign_in">Sign in</a></li>
+      <li class="nav_log_in"><a href="javascript:void(0);">Log in</a></li>
+
       <li class="nav_language"><a href="#language"><img src="asset\icon\AU.png" alt=""></a></li>
       <li class="nav_liked"><a href="#liked"><img src="asset\icon\liked.png" alt=""></a></li>
       <li class="nav_cart"><a href="#cart"><img src="asset\icon\cart.png" alt=""></a></li>
@@ -35,28 +37,30 @@
   <header class="header_div">
     <div class="header_left_box">
       <div class="header_carousel">
-        <div class="carousel_box"><img src="asset\img\carousel\7.png" alt=""></div>
+        <div class="carousel_box"><img src="asset\img\carousel\1.jpg" alt=""></div>
+        <div class="carousel_box"><img src="asset\img\carousel\2.png" alt=""></div>
+        <div class="carousel_box"><img src="asset\img\carousel\3.png" alt=""></div>
         <div class="carousel_box"><img src="asset\img\carousel\4.png" alt=""></div>
         <div class="carousel_box"><img src="asset\img\carousel\5.png" alt=""></div>
         <div class="carousel_box"><img src="asset\img\carousel\6.png" alt=""></div>
 
-        <div class="carousel_left">&lt;</div>
-        <div class="carousel_right">&gt;</div>
+        <div class="carousel_left" id="carousel_left">&lt;</div>
+        <div class="carousel_right" id="carousel_right">&gt;</div>
         <div class="carousel_point">
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li class="carousel_btn"></li>
+            <li class="carousel_btn"></li>
+            <li class="carousel_btn"></li>
+            <li class="carousel_btn"></li>
+            <li class="carousel_btn"></li>
+            <li class="carousel_btn"></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="header_right_box">
       <div class="header_slogan">Go Green, Live Clean.</div>
-      <div class="header_join_btn">Join Now</div>
+      <div class="header_join_btn"><a href="signup.html">Join Now</a></div>
     </div>
   </header>
 
@@ -64,20 +68,61 @@
   <main>
 
     <section>
+      <div>
+        <h2>Best Sell</h2>
+      </div>
 
-      <article>
-
-      </article>
 
     </section>
 
 
   </main>
 
-
-  <footer>
-
+  <footer class="footer_div" id="footer">
+    <div class="footer_info">
+      <div class="footer_intro">
+        <div class="footer_title">OUR WEBSITE</div>
+        <p>GreenShell is a convenient and reliable platform offering a variety of eco-friendly products. Here You can
+          easily find what you need, saving time during your selection process, contribute to our planet's ecological
+          harmony.</p>
+      </div>
+      <div class="footer_about">
+        <div class="footer_title">ABOUT ME</div>
+        <ul>
+          <li>Ziwei(Vivien) Wei</li>
+          <li>u7733544@anu.edu.au</li>
+          <li><a href="passion.html">My Passion</a></li>
+        </ul>
+      </div>
+      <div class="footer_links">
+        <div class="footer_title">USEFUL LINKS</div>
+        <ul>
+          <li><a href="sitemap.html">Site Map</a></li>
+          <li><a href="sourcelog.html">Source Log</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </div>
+    <p>&copy; 2024 GreenShell. All rights reserved.</p>
   </footer>
+
+  <!-- 登录模态窗口 -->
+  <div id="loginModal" class="modal">
+    <!-- 模态内容 -->
+    <div class="modal_content">
+
+      <!-- 登录表单 -->
+      <div class="login_image"><img src="asset\img\login.webp" alt=""></div>
+      <div class="login_info">
+        <form id="loginForm">
+          <input type="text" placeholder="Username">
+          <input type="password" placeholder="Password">
+          <input type="submit" value="Login">
+        </form>
+      </div> <span class="close">&times;</span>
+    </div>
+  </div>
+
 
   <script src="script.js"></script>
 </body>

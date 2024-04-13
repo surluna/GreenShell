@@ -214,6 +214,7 @@ nav a {
   width: 100%;
   max-height: 100%;
   opacity: 0;
+  transition: all 0.8s ease;
 }
 
 .carousel_box:nth-child(1) {
@@ -245,6 +246,7 @@ nav a {
   font-weight: var(--font-semi);
   color: white;
   border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 
 .carousel_right {
@@ -261,6 +263,7 @@ nav a {
   font-weight: var(--font-semi);
   color: white;
   border-radius: 5px 0 0 5px;
+  cursor: pointer;
 }
 
 .carousel_left:hover,
@@ -275,6 +278,7 @@ nav a {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  cursor: pointer;
 }
 
 .carousel_point li {
@@ -332,8 +336,85 @@ nav a {
   margin: 0 auto;
 }
 
+/* footer */
+.footer_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100%;
+  background-color: var(--second-color);
+  color: white;
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 1rem 0;
+  font-weight: 400;
+}
+
+.footer_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1% 0 2% 0;
+  width: 75%;
+}
+
+.footer_intro {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 6em;
+}
+
+.footer_about {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 8%;
+}
+
+.footer_links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.footer_title {
+  font-size: var(--normal-font-size);
+  margin-bottom: var(--mb-1);
+  border-bottom: 0.1em solid white;
+  font-weight: 600;
+}
+
+#footer li,
+p {
+  text-align: left;
+}
+
+/* passion */
+#passion {
+  width: 50%;
+}
+
+#passion p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.green {
+  font-weight: var(--font-semi);
+  color: var(--main-color);
+}
+
 /* feedback */
-.feedback {
+.main_title {
   margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
@@ -352,7 +433,8 @@ nav a {
 }
 
 #feedback input#name,
-input#email {
+input#email,
+input#pnum {
   height: 2em;
   width: 27em;
   padding: 0.5em;
@@ -368,4 +450,92 @@ input#email {
 
 #feedback label {
   margin-right: 10px;
+}
+
+#sitemap {
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+#sitemap li {
+  color: var(--main-color);
+  font-size: 20px;
+  line-height: 50px;
+}
+
+#sitemap a :visited {
+  color: var(--second-color);
+}
+
+
+/* modal login page */
+.modal {
+  display: none;
+  /* 默认不显示 */
+  position: fixed;
+  z-index: var(--z-fixed);
+  /* 高于其他元素 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 半透明背景 */
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: row;
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height: 30%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  cursor: pointer;
+}
+
+.login_image {
+  display: flex;
+  flex: 1;
+}
+
+.login_image img {
+  width: 100%;
+  height: 100%;
+}
+
+.login_info {
+  flex: 1;
+}
+
+/* 表单样式 */
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+  margin-bottom: 15px;
+}
+
+#loginForm input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }

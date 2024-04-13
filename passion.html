@@ -6,33 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>My Passion</title>
-  <style>
-    div {
-      width: 50%;
-      margin: 100px auto;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 50px;
-      margin-bottom: 50px;
-    }
-
-    p {
-      font-size: 19px;
-      text-align: justify;
-    }
-
-    .green {
-      font-weight: 600;
-      color: green;
-    }
-  </style>
 </head>
 
 <body>
-  <div>
-    <h1>My Passion</h1>
+  <a href="assignment.html" target="_blank">
+    <div class="assignment">My<br>Assignment</div>
+  </a>
+  <nav>
+    <ul class="nav_div">
+      <li class="nav_logo"><a href="index.html">GreenShell</a></li>
+      <li class="nav_categories"><a href="#categories"><img src="asset\icon\categories.png" alt="">categories</a>
+      </li>
+      <li class="nav_search">
+        <form class="nav_search" action="https://www.google.com/search" method="GET" target="_blank">
+          <div class="search_box">
+            <input type="text" name="q" placeholder="Search" required>
+            <button type="submit" class="search_btn"></button>
+          </div>
+        </form>
+      </li>
+      <li class="nav_sign_in"><a href="#sign_in">Sign in</a></li>
+      <li class="nav_language"><a href="#language"><img src="asset\icon\AU.png" alt=""></a></li>
+      <li class="nav_liked"><a href="#liked"><img src="asset\icon\liked.png" alt=""></a></li>
+      <li class="nav_cart"><a href="#cart"><img src="asset\icon\cart.png" alt=""></a></li>
+    </ul>
+  </nav>
+  <div class="main_title" id="passion">
+    <h1 class="bigger_title">My Passion</h1>
     <p>Hi, I am Ziwei. I have a strong interest in web development and have previously created a few small scale
       so-called
       "toy projects". However, I've always aspired to gain a deeper understanding of web design and to develop a real

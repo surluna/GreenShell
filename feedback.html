@@ -9,12 +9,12 @@
 </head>
 
 <body>
-  <a href="assignment.html">
+  <a href="assignment.html" target="_blank">
     <div class="assignment">My<br>Assignment</div>
   </a>
   <nav>
     <ul class="nav_div">
-      <li class="nav_logo"><a href="/index.html">GreenShell</a></li>
+      <li class="nav_logo"><a href="index.html">GreenShell</a></li>
       <li class="nav_categories"><a href="#categories"><img src="asset\icon\categories.png" alt="">categories</a>
       </li>
       <li class="nav_search">
@@ -31,40 +31,48 @@
       <li class="nav_cart"><a href="#cart"><img src="asset\icon\cart.png" alt=""></a></li>
     </ul>
   </nav>
-  <section class="feedback" id="feedback">
+  <section class="main_title" id="feedback">
     <h1 class="bigger_title">Feedback Form</h1>
-    <form>
+    <form enctype="text/plain" method="POST" action="mailto:u7733544@anu.edu.au?subject=Feedback" id="feedback_form">
       <table class="set_middle feedback_table">
-        <tr>
-          <td><label for="name">Your name</label><br>
-            <input type="text" name="name" id="name" maxlength="6">
-          </td>
-        </tr>
-
-        <tr>
-          <td><label for="email">Your email address</label><br>
-            <input type="email" id="email" name="email">
-          </td>
-        </tr>
-        <tr>
-          <td>What is your gender?<br>
-            <input type="radio" id="female" name="sex" value="female" checked="checked"><label
-              for="female">Female</label>
-            <input type="radio" id="male" name="sex" value="male"><label for="male">Male</label>
-            <input type="radio" id="others" name="sex" value="others"><label for="others">Other</label>
-            <input type="radio" id="none" name="sex" value="none"><label for="others">I prefer not to say</label>
-          </td>
-        </tr>
-        <tr>
-          <td>Please fill in your feedback<br>
-            <textarea name="feedback" id="feedback" cols="53" rows="15"></textarea>
-          </td>
-        </tr>
-        <tr>
-          <td class="buttonsLine">
-            <input type="reset" id="clear" value="Clear"><input type="submit" value="Submit">
-          </td>
-        </tr>
+        <form>
+          <tr>
+            <td><label for="name">Your name</label><br>
+              <input type="text" name="name" id="name" maxlength="6">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pnum">Phone number</label><br>
+              <input type="text" id="pnum" name="pnum">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Your email address</label><br>
+              <input type="email" id="email" name="email">
+            </td>
+          </tr>
+          <tr>
+            <td>What is your gender?<br>
+              <input type="radio" id="female" name="sex" value="female" checked="checked"><label
+                for="female">Female</label>
+              <input type="radio" id="male" name="sex" value="male"><label for="male">Male</label>
+              <input type="radio" id="others" name="sex" value="others"><label for="others">Other</label>
+              <input type="radio" id="none" name="sex" value="none"><label for="others">I prefer not to say</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Please fill in your feedback<br>
+              <textarea name="feedback" id="feedback" cols="53" rows="15"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="buttonsLine">
+              <input type="reset" id="clear" value="Clear">
+              <input type="submit" value="Submit">
+            </td>
+          </tr>
+      </table>
+    </form>
   </section>
 </body>
 
