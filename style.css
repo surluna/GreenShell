@@ -80,6 +80,7 @@ body {
   font-size: var(--h3-font-size);
   text-align: center;
   border-radius: 30px 50px 15PX 50px;
+  z-index: 100;
 }
 
 
@@ -310,18 +311,124 @@ nav a {
 }
 
 .header_join_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 8em;
-  height: 3em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  background-color: var(--main-color);
+  color: white;
   text-align: center;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  border: 0.2em ridge var(--border-color);
-  font-weight: var(--font-semi);
-  margin-top: 2em;
+  text-decoration: none;
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  border: none;
+  border-radius: 30px 50px 15PX 50px;
   cursor: pointer;
+  margin-top: 3%;
+  transition: background-color 0.3s ease;
+}
+
+.header_join_btn:hover {
+  background-color: #124d0a;
+}
+
+/* main */
+.main_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 6%;
+  width: 100%;
+}
+
+.main_div_title {
+  font-size: var(--h2-font-size);
+  margin-top: 5em;
+  margin-bottom: var(--mb-2);
+  text-align: center;
+  text-decoration: underline;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.bs_div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5em;
+  padding: 0 8em;
+  margin-top: 4%;
+  width: 100%;
+}
+
+.bs_div img {
+  max-width: 100%;
+}
+
+.bs_title {
+  font-size: var(--h3-font-size);
+  margin-top: 0.5em;
+}
+
+.bs_price {
+  font-size: var(--h3-font-size);
+}
+
+.categories_div {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1em;
+  padding: 0 5em;
+  margin-top: 4%;
+  width: 100%;
+}
+
+.categories_div img {
+  max-width: 100%;
+}
+
+.categories_div p {
+  margin-top: 2%;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  max-width: 100%;
+}
+
+.dm_div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  padding: 0 5em;
+  margin-top: 4%;
+  width: 100%;
+}
+
+.dm_div img {
+  max-width: 100%;
+}
+
+.materials_title {
+  font-size: var(--h3-font-size);
+  padding-left: 1%;
+  margin-top: 8em;
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+
+.materials_container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.materials_div {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 1em;
+  padding: 0 5em;
+  width: 200%;
+}
+
+.materials_div img {
+  max-width: 100%;
 }
 
 .bigger_title {
@@ -343,7 +450,7 @@ nav a {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 100%;
+  margin-top: 10%;
   background-color: var(--second-color);
   color: white;
   text-align: center;
@@ -467,20 +574,20 @@ input#pnum {
   color: var(--second-color);
 }
 
+#source_log table {
+  margin-bottom: 10%;
+}
 
 /* modal login page */
 .modal {
   display: none;
-  /* 默认不显示 */
   position: fixed;
   z-index: var(--z-fixed);
-  /* 高于其他元素 */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* 半透明背景 */
 }
 
 .modal_content {

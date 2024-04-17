@@ -51,28 +51,47 @@
   startInterval();
 })();
 
+// materialsDiv scroll
+const materialsDiv = document.querySelector('.materials_div');
+const duration = 20000;
+let startTime = null;
+let elapsedTime = 0;
+let animationId = null;
 
-// 获取模态窗口
+function animate(timestamp) {
+  if (!startTime) startTime = timestamp - elapsedTime;
+  elapsedTime = (timestamp - startTime) % duration;
+  materialsDiv.style.transform = `translateX(${-elapsedTime / duration * 50}%)`;
+  animationId = requestAnimationFrame(animate);
+}
+
+materialsDiv.addEventListener('mouseenter', () => {
+  cancelAnimationFrame(animationId);
+});
+
+materialsDiv.addEventListener('mouseleave', () => {
+  startTime = null;
+  animationId = requestAnimationFrame(animate);
+});
+
+animationId = requestAnimationFrame(animate);
+
+//login modal
 var modal = document.getElementById('loginModal');
 
-// 获取打开模态窗口的链接
 var loginLink = document.querySelector('.nav_log_in a');
 
-// 获取关闭按钮
 var closeBtn = document.querySelector('.modal .close');
 
-// 点击登录链接时打开模态窗口
 loginLink.onclick = function (event) {
   event.preventDefault();
   modal.style.display = 'block';
 }
 
-// 点击关闭按钮时关闭模态窗口
 closeBtn.onclick = function () {
   modal.style.display = 'none';
 }
 
-// 点击窗口外区域时关闭模态窗口
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = 'none';
