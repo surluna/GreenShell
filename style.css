@@ -332,10 +332,10 @@ nav a {
 
 /* main */
 .main_div {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start; */
   margin-top: 6%;
   width: 100%;
 }
@@ -370,6 +370,35 @@ nav a {
 
 .bs_price {
   font-size: var(--h3-font-size);
+}
+
+.cta_offer {
+  background-color: #f1f8e9;
+  text-align: center;
+  padding: 30px;
+  margin: 50px 0;
+}
+
+.cta_offer p {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.offer_btn {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px 50px 15PX 50px;
+  cursor: pointer;
+}
+
+.offer_btn:hover {
+  background-color: #124d0a;
 }
 
 .categories_div {
@@ -522,7 +551,7 @@ p {
 
 /* feedback */
 .main_title {
-  margin-top: 5%;
+  margin-top: 3.5%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -628,21 +657,86 @@ input#pnum {
   flex: 1;
 }
 
-/* 表单样式 */
-#loginForm {
-  display: flex;
-  flex-direction: column;
+.login_form {
+  margin: auto;
+  width: 300px;
+  padding: 20px;
 }
 
-#loginForm input[type="text"],
-#loginForm input[type="password"] {
-  margin-bottom: 15px;
-}
-
-#loginForm input[type="submit"] {
-  background-color: var(--main-color);
-  color: white;
-  border: none;
+/* login form */
+.login_form input[type="text"],
+.login_form input[type="password"],
+.login_form input[type="submit"] {
+  width: 100%;
   padding: 10px;
-  cursor: pointer;
+  margin: 10px 0;
+  font-size: var(--normal-font-size);
+}
+
+.login_form a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login_form a ins {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* signup form */
+.signup_form {
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+}
+
+.signup_form input[type="text"],
+.signup_form input[type="password"],
+.signup_form input[type="file"],
+.signup_form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: var(--normal-font-size);
+}
+
+.signup_form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.signup_form .terms {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.signup_form .terms input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.signup_form a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup_form a ins {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+}
+
+.terms label {
+  margin-right: 5px;
+}
+
+.inline_link {
+  text-decoration: underline;
 }

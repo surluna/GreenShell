@@ -26,7 +26,7 @@
           </div>
         </form>
       </li>
-      <li class="nav_log_in"><a href="javascript:void(0);">Log in</a></li>
+      <li class="nav_sign_in"><a href="login.html">Log in</a></li>
 
       <li class="nav_language"><a href="#language"><img src="asset\icon\AU.png" alt=""></a></li>
       <li class="nav_liked"><a href="#liked"><img src="asset\icon\liked.png" alt=""></a></li>
@@ -37,12 +37,12 @@
   <header class="header_div">
     <div class="header_left_box">
       <div class="header_carousel">
-        <div class="carousel_box"><img src="asset\img\carousel\1.jpg" alt=""></div>
-        <div class="carousel_box"><img src="asset\img\carousel\2.png" alt=""></div>
-        <div class="carousel_box"><img src="asset\img\carousel\3.png" alt=""></div>
-        <div class="carousel_box"><img src="asset\img\carousel\4.png" alt=""></div>
-        <div class="carousel_box"><img src="asset\img\carousel\5.png" alt=""></div>
-        <div class="carousel_box"><img src="asset\img\carousel\6.png" alt=""></div>
+        <div class="carousel_box"><img src="asset/img/carousel/1.png" alt="Featured product image 1"></div>
+        <div class="carousel_box"><img src="asset/img/carousel/2.png" alt="Featured product image 2"></div>
+        <div class="carousel_box"><img src="asset/img/carousel/3.png" alt="Featured product image 3"></div>
+        <div class="carousel_box"><img src="asset/img/carousel/4.png" alt="Featured product image 4"></div>
+        <div class="carousel_box"><img src="asset/img/carousel/5.png" alt="Featured product image 5"></div>
+        <div class="carousel_box"><img src="asset/img/carousel/6.png" alt="Featured product image 6"></div>
 
         <div class="carousel_left" id="carousel_left">&lt;</div>
         <div class="carousel_right" id="carousel_right">&gt;</div>
@@ -60,67 +60,72 @@
     </div>
     <div class="header_right_box">
       <div class="header_slogan">Go Green, Live Clean.</div>
-      <div class="header_join_btn"><a href="signup.html">Join Now</a></div>
+      <div class="header_join_btn" id="cta_joinnow"><a href="signup.html">Join Now</a></div>
     </div>
   </header>
-
-
+  <!-- cta offer -->
   <main class="main_div">
-
-    <section>
+    <div class="cta_offer" id="cta_offer">
+      <h2>Special Offer Just for You!</h2>
+      <p>Subscribe to our website and receive an exclusive 10% off your first purchase.</p>
+      <a href="signup.html" class="btn offer_btn">Get My Discount</a>
+    </div>
+    <section id="product_display_area">
       <div class="main_div_title">
         <h2>&nbsp;&nbsp;Best Sell&nbsp;&nbsp;</h2>
       </div>
       <div class="bs_div">
         <div>
-          <a href="#link"><img src="asset/img/bestsell/1.png" alt=""> </a>
+          <a href="#link"><img src="asset/img/bestsell/1.png" alt="Recycled Glass Bottle"></a>
           <p class="bs_title"><a href="#link">Recycled Glass Bottle</a></p>
           <p class="bs_price"><a href="#link">$17.10</a></p>
 
         </div>
         <div>
-          <a href="#link"><img src="asset/img/bestsell/4.png" alt=""></a>
+          <a href="#link"><img src="asset/img/bestsell/4.png" alt="Reusable Shopping Bags"></a>
           <p class="bs_title"><a href="#link">Reusable shopping bags</a></p>
           <p class="bs_price"><a href="#link">$67.80</a></p>
 
         </div>
       </div>
+      <!-- product categories -->
       <div class="main_div_title">
         <h2>&nbsp;&nbsp;Categories&nbsp;&nbsp;</h2>
       </div>
-      <div class="categories_div">
+      <div class="categories_div" id="categories">
         <div>
-          <a href="#clothes"><img src="asset/img/categories/clothes.png" alt=""></a>
+          <a href="#clothes"><img src="asset/img/categories/clothes.png" alt="Clothes category image"></a>
           <a href="#clothes">
             <p>Clothes</p>
           </a>
         </div>
         <div>
-          <a href="#personal-care"><img src="asset/img/categories/personal care.png" alt=""></a>
+          <a href="#personal-care"><img src="asset/img/categories/personal care.png"
+              alt="Personal Care category image"></a>
           <a href="#personal-care">
             <p>Personal Care</p>
           </a>
         </div>
         <div>
-          <a href="#household"><img src="asset/img/categories/household.png" alt=""></a>
+          <a href="#household"><img src="asset/img/categories/household.png" alt="Household category image"></a>
           <a href="#household">
             <p>Household</p>
           </a>
         </div>
         <div>
-          <a href="#kitchen"><img src="asset/img/categories/kitchen.png" alt=""></a>
+          <a href="#kitchen"><img src="asset/img/categories/kitchen.png" alt="kitchen category image"></a>
           <a href="#kitchen">
             <p>Kitchen</p>
           </a>
         </div>
         <div>
-          <a href="#office"><img src="asset/img/categories/office.png" alt=""></a>
+          <a href="#office"><img src="asset/img/categories/office.png" alt="office category image"></a>
           <a href="#office">
             <p>Office</p>
           </a>
         </div>
         <div>
-          <a href="#pets"><img src="asset/img/categories/pets.png" alt=""></a>
+          <a href="#pets"><img src="asset/img/categories/pets.png" alt="pets category image"></a>
           <a href="#pets">
             <p>Pets</p>
           </a>
@@ -130,13 +135,18 @@
         <h2>&nbsp;&nbsp;Discover More&nbsp;&nbsp;</h2>
       </div>
       <div class="dm_div">
-        <a href="#link"><img src="asset/img/discovermore/1.png" alt=""></a>
-        <a href="#link"><img src="asset/img/discovermore/2.png" alt=""></a>
-        <a href="#link"><img src="asset/img/discovermore/4.png" alt=""></a>
-        <a href="#link"><img src="asset/img/discovermore/3.png" alt=""></a>
-        <a href="#link"><img src="asset/img/discovermore/5.png" alt=""></a>
-        <a href="#link"><img src="asset/img/discovermore/6.png" alt=""></a>
+        <!-- <a href="#link"><img src="asset/img/discovermore/1.png" alt="product image 1"></a> -->
+        <!-- Place <div> tag where you want the feed to appear -->
+        <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank"
+            class="crt-logo crt-tag">Powered by Curator.io</a></div>
+
+        <a href="#link"><img src="asset/img/discovermore/2.png" alt="product image 2"></a>
+        <a href="#link"><img src="asset/img/discovermore/4.png" alt="product image 3"></a>
+        <a href="#link"><img src="asset/img/discovermore/3.png" alt="product image 4"></a>
+        <a href="#link"><img src="asset/img/discovermore/5.png" alt="product image 5"></a>
+        <a href="#link"><img src="asset/img/discovermore/6.png" alt="product image 6"></a>
       </div>
+      <!-- product material scroll photo wall -->
       <div class="materials_title">
         <h3>&nbsp;&nbsp;For each product, we promise we ONLY use&nbsp;&nbsp;</h3>
       </div>
@@ -166,9 +176,8 @@
       </div>
     </section>
 
-
   </main>
-
+  <!-- footer -->
   <footer class="footer_div" id="footer">
     <div class="footer_info">
       <div class="footer_intro">
@@ -196,23 +205,6 @@
     </div>
     <p>&copy; 2024 GreenShell. All rights reserved.</p>
   </footer>
-
-
-  <div id="loginModal" class="modal">
-
-    <div class="modal_content">
-
-      <div class="login_image"><img src="asset\img\login.webp" alt=""></div>
-      <div class="login_info">
-        <form id="loginForm">
-          <input type="text" placeholder="Username">
-          <input type="password" placeholder="Password">
-          <input type="submit" value="Login">
-        </form>
-      </div> <span class="close">&times;</span>
-    </div>
-  </div>
-
 
   <script src="script.js"></script>
 </body>

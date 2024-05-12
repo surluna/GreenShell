@@ -25,42 +25,42 @@
           </div>
         </form>
       </li>
-      <li class="nav_sign_in"><a href="#sign_in">Sign in</a></li>
+      <li class="nav_sign_in"><a href="login.html">Log in</a></li>
       <li class="nav_language"><a href="#language"><img src="asset\icon\AU.png" alt=""></a></li>
       <li class="nav_liked"><a href="#liked"><img src="asset\icon\liked.png" alt=""></a></li>
       <li class="nav_cart"><a href="#cart"><img src="asset\icon\cart.png" alt=""></a></li>
     </ul>
   </nav>
-  <section class="main_title" id="signin">
+  <section class="main_title" id="signup">
     <h1 class="bigger_title">Sign Up</h1>
-    <form>
-      <table class="set_middle feedback_table">
-        <tr>
-          <td><label for="name">username:</label></td>
-          <td><input type="text" name="name" id="name" maxlength="20"></td>
-        </tr>
+    <form class="signup_form">
+      <label for="name">Username:</label>
+      <input type="text" name="name" id="name" maxlength="20">
 
-        <tr>
-          <td><label for="code">password:</label></td>
-          <td><input type="password" id="code" name="code"></td>
-        </tr>
-        <tr>
-          <td><label for="pnum">phone number:</label></td>
-          <td><input type="text" id="pnum" name="pnum"></td>
-        </tr>
-        <tr>
-          <td><label for="verifcode">验证码：</label></td>
-          <td><input type="text" id="verifcode" maxlength="6" name="verifcode"></td>
-        </tr>
-        <tr>
-          <td>uplode portraits</td>
-          <td><input type="file" name="portraits" value="choose image…"></td>
-        </tr>
-      </table>
-      <input type="checkbox" name="argee" checked="checked" id="agree"><label for="agree">我同意<a href="#">注册条款</a>和<a
-          href="#">会员加入标准</a></label><br /><br />
-      <input type="reset">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="提交"><br /><br />
-      <a href="login.html"><ins>已有账号 立即登入</ins></a><br /><br />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+
+      <label for="confirm_password">Confirm password:</label>
+      <input type="password" id="confirm_password" name="confirm_password">
+
+      <!-- <label for="phone_number">Phone number:</label>
+      <input type="text" id="phone_number" name="phone_number"> -->
+
+      <label for="portraits">Upload portraits:</label>
+      <input type="file" id="portraits" name="portraits">
+
+      <div class="terms">
+        <label>
+          <input type="checkbox" name="agree" checked="checked" id="agree">
+          I agree
+        </label>
+        <a href="#" class="inline_link">Registration Terms</a>
+      </div>
+
+
+      <input type="submit" value="Submit">
+      <a href="login.html"><ins>Already have an account?
+          <br>Log in now</ins></a>
     </form>
   </section>
 </body>
