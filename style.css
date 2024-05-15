@@ -820,6 +820,9 @@ body.dark-mode .cta_offer {
   background-color: var(--dark-border-color);
 }
 
+body.dark-mode #sitemap li {
+  color: var(--dark-text-color);
+}
 
 body.dark-mode img {
   filter: brightness(0.8) contrast(1.2);
