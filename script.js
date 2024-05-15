@@ -1,12 +1,17 @@
-// carousel function
-(function () {
+// Function to initialize the carousel
+function initializeCarousel() {
   // Initialize index
   let index = 0;
   let imgs = document.getElementsByClassName('carousel_box');
   let btns = document.getElementsByClassName('carousel_btn');
   let intervalId;
 
-  // update carousel's visible image and active btn
+  // Check if carousel elements exist
+  if (imgs.length === 0 || btns.length === 0) {
+    return;
+  }
+
+  // Update carousel's visible image and active btn
   function updateCarousel() {
     for (let i = 0; i < imgs.length; i++) {
       imgs[i].style.opacity = '0';
@@ -15,14 +20,16 @@
     imgs[index].style.opacity = '1';
     btns[index].style.backgroundColor = 'rgba(113, 113, 113, 0.65)';
   }
-  // start the automatic carousel rotation
+
+  // Start the automatic carousel rotation
   function startInterval() {
     intervalId = setInterval(function () {
       index = (index + 1) % imgs.length;
       updateCarousel();
     }, 3000);
   }
-  // attach click listeners to carousel btns
+
+  // Attach click listeners to carousel btns
   function btnListeners() {
     for (let i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', function () {
@@ -34,6 +41,7 @@
       });
     }
   }
+
   // Attach event listeners to left and right navigation btns
   document.getElementById('carousel_left').addEventListener('click', function () {
     clearInterval(intervalId);
@@ -52,37 +60,81 @@
   updateCarousel();
   btnListeners();
   startInterval();
-})();
+}
 
-// scrolling animation in the materials section
-const materialsDiv = document.querySelector('.materials_div');
-const duration = 20000;
-let startTime = null;
-let elapsedTime = 0;
-let animationId = null;
-// perform animation over time
-function animate(timestamp) {
-  if (!startTime) startTime = timestamp - elapsedTime;
-  elapsedTime = (timestamp - startTime) % duration;
-  materialsDiv.style.transform = `translateX(${-elapsedTime / duration * 50}%)`;
+// Function to initialize scrolling animation in the materials section
+function initializeScrollingAnimation() {
+  const materialsDiv = document.querySelector('.materials_div');
+  const duration = 20000;
+  let startTime = null;
+  let elapsedTime = 0;
+  let animationId = null;
+
+  // Check if materialsDiv exists
+  if (!materialsDiv) {
+    return;
+  }
+
+  // Perform animation over time
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp - elapsedTime;
+    elapsedTime = (timestamp - startTime) % duration;
+    materialsDiv.style.transform = `translateX(${-elapsedTime / duration * 50}%)`;
+    animationId = requestAnimationFrame(animate);
+  }
+
+  // Stop the animation when the mouse enters
+  materialsDiv.addEventListener('mouseenter', () => {
+    cancelAnimationFrame(animationId);
+  });
+
+  // Resume animation when the mouse leaves
+  materialsDiv.addEventListener('mouseleave', () => {
+    startTime = null;
+    animationId = requestAnimationFrame(animate);
+  });
+
   animationId = requestAnimationFrame(animate);
 }
-// Stop the animation when the mouse enter
-materialsDiv.addEventListener('mouseenter', () => {
-  cancelAnimationFrame(animationId);
-});
-
-materialsDiv.addEventListener('mouseleave', () => {
-  // Reset the start time and resume animation
-  startTime = null;
-  animationId = requestAnimationFrame(animate);
-});
-
-animationId = requestAnimationFrame(animate);
 
 /* curator-feed-default-feed-layout */
 (function () {
-  var i, e, d = document, s = "script"; i = d.createElement("script"); i.async = 1; i.charset = "UTF-8";
+  var i, e, d = document, s = "script";
+  i = d.createElement("script");
+  i.async = 1;
+  i.charset = "UTF-8";
   i.src = "https://cdn.curator.io/published/eba6ce2b-35d5-47c2-9958-66aa2df6fcb4.js";
-  e = d.getElementsByTagName(s)[0]; e.parentNode.insertBefore(i, e);
+  e = d.getElementsByTagName(s)[0];
+  e.parentNode.insertBefore(i, e);
 })();
+
+// Function to initialize the navbar
+function initializeNavbar() {
+  const themeToggleButton = document.querySelector('.nav_mode a');
+
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme) {
+    document.body.classList.toggle('dark-mode', currentTheme === 'dark');
+  }
+
+  themeToggleButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  });
+}
+
+// Fetch and include the navbar
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('navbar-container').innerHTML = html;
+      initializeNavbar(); // Initialize navbar after loading
+      initializeCarousel(); // Initialize carousel if present
+      initializeScrollingAnimation(); // Initialize scrolling animation if present
+    })
+    .catch(error => {
+      console.error('Error loading navbar:', error);
+    });
+});

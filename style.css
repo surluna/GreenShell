@@ -1,9 +1,15 @@
 :root {
   --font-semi: 600;
-  /*===== Colores =====*/
+  /* Light mode colors */
   --main-color: #1a740e;
   --second-color: #424242;
   --border-color: #66676726;
+  /* Dark mode colors */
+  --dark-main-color: #B8FFA0;
+  --dark-hover-main-color: rgb(91, 132, 86);
+  --dark-background-color: #1f1f1f;
+  --dark-text-color: rgb(250, 250, 250);
+  --dark-border-color: #525252;
   /*===== Sizes =====*/
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
@@ -62,6 +68,8 @@ body {
   align-items: flex-start;
   width: 100%;
   height: 100%;
+  min-width: 500px;
+  min-height: 50px;
 }
 
 /* assignment */
@@ -92,6 +100,7 @@ body {
   flex-direction: row;
   width: 100%;
   height: 8%;
+  min-height: 50px;
   justify-content: flex-end;
   align-items: center;
   padding: 1% 8%;
@@ -119,8 +128,12 @@ nav a {
   font-weight: var(--font-semi);
 }
 
+.nav_mode {
+  flex: 2;
+}
+
 .nav_categories {
-  flex: 4;
+  flex: 2;
   text-align: center;
 }
 
@@ -746,4 +759,53 @@ input#pnum {
 
 .inline_link {
   text-decoration: underline;
+}
+
+/* dark model */
+body.dark-mode {
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .nav_div,
+body.dark-mode .footer_div,
+body.dark-mode .modal_content {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .main_div_title,
+body.dark-mode .bs_price {
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .bigger_title,
+body.dark-mode .nav_logo,
+body.dark-mode .header_slogan,
+body.dark-mode .materials_title {
+  color: var(--dark-main-color);
+}
+
+body.dark-mode .assignment,
+body.dark-mode .header_join_btn,
+body.dark-mode .offer_btn {
+  background-color: var(--dark-main-color);
+  color: var(--dark-background-color);
+}
+
+body.dark-mode .assignment:hover,
+body.dark-mode .header_join_btn:hover,
+body.dark-mode .offer_btn:hover {
+  background-color: var(--dark-hover-main-color);
+  color: var(--dark-background-color);
+}
+
+body.dark-mode .carousel_left,
+body.dark-mode .carousel_right,
+body.dark-mode .cta_offer {
+  background-color: var(--dark-border-color);
+}
+
+
+body.dark-mode img {
+  filter: brightness(0.8) contrast(1.2);
 }
