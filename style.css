@@ -810,6 +810,10 @@ body.dark-mode .icon img {
   filter: invert(1);
 }
 
+body.dark-mode .nav_search .search_btn {
+  filter: invert(1);
+}
+
 body.dark-mode .carousel_left,
 body.dark-mode .carousel_right,
 body.dark-mode .cta_offer {
