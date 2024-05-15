@@ -125,16 +125,34 @@ function initializeNavbar() {
 }
 
 // Fetch and include the navbar
-document.addEventListener('DOMContentLoaded', function () {
-  fetch('navbar.html')
+document.addEventListener('DOMContentLoaded', () => {
+  // Fetch and include the navbar, footer, assignmentStricker
+  fetch('assembly/navbar.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('navbar-container').innerHTML = html;
-      initializeNavbar(); // Initialize navbar after loading
-      initializeCarousel(); // Initialize carousel if present
-      initializeScrollingAnimation(); // Initialize scrolling animation if present
+      initializeNavbar();
     })
     .catch(error => {
       console.error('Error loading navbar:', error);
     });
+
+  fetch('assembly/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    })
+    .catch(error => {
+      console.error('Error loading footer:', error);
+    });
+
+  fetch('assembly/assignment-sticker.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('assignment-sticker-container').innerHTML = html;
+    })
+    .catch(error => {
+      console.error('Error loading assignmentStricker:', error);
+    });
 });
+
