@@ -35,7 +35,6 @@ function initializeCarousel() {
       btns[i].addEventListener('click', function () {
         clearInterval(intervalId);
         index = i;
-
         updateCarousel();
         startInterval();
       });
@@ -124,9 +123,9 @@ function initializeNavbar() {
   });
 }
 
-// Fetch and include the navbar
+// Fetch and include the navbar, footer, and assignmentSticker
 document.addEventListener('DOMContentLoaded', () => {
-  // Fetch and include the navbar, footer, assignmentStricker
+  // Fetch and include the navbar
   fetch('assembly/navbar.html')
     .then(response => response.text())
     .then(html => {
@@ -137,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error loading navbar:', error);
     });
 
+  // Fetch and include the footer
   fetch('assembly/footer.html')
     .then(response => response.text())
     .then(html => {
@@ -146,13 +146,17 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error loading footer:', error);
     });
 
-  fetch('assembly/assignment-sticker.html')
+  // Fetch and include the assignment sticker
+  fetch('assembly/assignmentSticker.html')
     .then(response => response.text())
     .then(html => {
-      document.getElementById('assignment-sticker-container').innerHTML = html;
+      document.getElementById('assignmentSticker-container').innerHTML = html;
     })
     .catch(error => {
-      console.error('Error loading assignmentStricker:', error);
+      console.error('Error loading assignment sticker:', error);
     });
-});
 
+  // Initialize other features
+  initializeCarousel();
+  initializeScrollingAnimation();
+});
