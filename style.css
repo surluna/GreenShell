@@ -163,7 +163,7 @@ nav a {
 }
 
 .nav_search .search_btn {
-  background: url('asset/icon/search.png') no-repeat center center;
+  background: url('asset/icon/search.webp') no-repeat center center;
   border: none;
   position: absolute;
   right: 0.5em;
